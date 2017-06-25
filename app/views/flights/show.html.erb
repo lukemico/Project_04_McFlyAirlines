@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<h1>Flight: <%= @flight.flight_number%></h1>
+
+<div class="collection">
+  <p class="collection-item">
+    <strong>Airplane:</strong>
+    <%= @flight.airplane_id %>
+  </p>
+
+  <p class="collection-item">
+    <strong>Origin:</strong>
+    <%= @flight.origin %>
+  </p>
+
+  <p class="collection-item">
+    <strong>Destination:</strong>
+    <%= @flight.destination %>
+  </p>
+
+  <p class="collection-item">
+    <strong>Departure date:</strong>
+    <%= @flight.departure_date %>
+  </p>
+
+  <p class="collection-item">
+    <strong>Departure time:</strong>
+    <%= @flight.departure_time %>
+  </p>
+</div>
+
+<button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Edit', edit_flight_path(@flight) %></button>
+<button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Back', flights_path %></button>
+
+
+<!-- <h1>This is where backbone should be loaded</h1> -->

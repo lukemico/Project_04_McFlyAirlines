@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ @import "materialize/components/color";
+ $primary-color: color("blue", "lighten-2") !default;
+ $secondary-color: color("light-blue", "lighten-3") !default;
+ @import 'materialize';
+
+
+ body {
+  display: flex; // sticky footer materialize
+  min-height: 100vh; // sticky footer materialize
+  flex-direction: column; // sticky footer materialize
+  font-size: 14px;
+  color: #757575;
+  background: image-url('image8.jpg');
+  background-size: 100% auto;
+}
+
+.container {
+  background-color: rgba(255,255,255,.9);
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+p {
+  margin: 0;
+}
+
+#notice {
+    color: rgba(48, 203, 204, 1);
+}
+
+nav {
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+nav ul li {
+  padding: 20px 15px;
+}
+
+nav ul li a {
+  color: rgba(48, 203, 204, 1);
+}
+
+nav .brand-logo {
+  color: rgba(48, 203, 204, 1);
+  padding-left: 30px;
+}
+
+table, .collection {
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 35px;
+  color: rgba(48, 203, 204, 1);
+}
+
+.input-field label {
+  font-size: 12px;
+}
+
+a {
+  color: rgba(48, 203, 204, 1);
+  text-decoration: none;
+}
+
+a:visited {
+  // color: rgba(48, 203, 204, 1);
+    text-decoration: none;
+}
+
+.btn a {
+  color: #fff;
+}
+
+.main {
+  flex: 1 0 auto; // sticky footer materialize
+}
+
+
+#flights li {
+  padding: 20px 20px;
+  // border: 0.5px solid rgba(48, 203, 204, 1);
+}
+
+#flights li:hover {
+  background-color: rgba(129,212,250,.5);
+  // color: white;
+}
+
+ul  {
+  margin: 0;
+  margin-top: 30px;
+}

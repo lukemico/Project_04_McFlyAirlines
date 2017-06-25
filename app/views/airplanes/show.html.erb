@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<h1>Airplane: <%= @airplane.name %></h1>
+
+<div class="collection">
+
+  <p class="collection-item">
+    <strong>Rows:</strong>
+    <%= @airplane.rows %>
+  </p>
+
+  <p class="collection-item">
+    <strong>Columns:</strong>
+    <%= @airplane.columns %>
+  </p>
+</div>
+
+<button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Edit', edit_airplane_path(@airplane) %></button>
+
+<button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Back', airplanes_path %></button>

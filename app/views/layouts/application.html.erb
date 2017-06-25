@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AirplaneApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="white">
+
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo">McFly Airlines</a>
+              <ul class="right hide-on-med-and-down">
+                <li><%= link_to "Airplanes", "/airplanes" %>Airplanes</li>
+                <li><%= link_to "Flights", "/flights" %>Flights</li>
+                <li><%= link_to "Guests", "/users" %>Users</li>
+                <li><%= link_to "Reservations", "/" %>Reservations</li>
+                <li>
+                  <% if @current_user %>
+                    <%= link_to @current_user.email, user_path(@current_user) %>
+                  <% else %>
+                    <%= link_to 'Login', '/login' %>
+                  <% end %>
+                  <li>
+
+                  <li>
+                    <% if @current_user %>
+                      <%= link_to "Log Out", "/logout", method: :delete %>
+                    <% else %>
+                      <%= link_to "Sign Up", "/users/new" %>
+                    <% end %>
+                </li>
+              </ul>
+            </div>
+
+    </nav>
+
+    <div class="main">
+      <div class="container">
+
+      <%= yield %>
+
+      </div>
+    </div>

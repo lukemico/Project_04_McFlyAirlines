@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<h1>Reservation: <%= @reservation.id%></h1>
+
+<div class="collection">
+  <p class="collection-item">
+    <strong>Flight:</strong>
+    <%= @reservation.flight_id %>
+  </p>
+
+  <p class="collection-item">
+    <strong>User:</strong>
+    <%= @reservation.user_id %>
+  </p>
+
+  <p class="collection-item">
+    <strong>Rows:</strong>
+    <%= @reservation.rows %>
+  </p>
+
+  <p class="collection-item">
+    <strong>Columns:</strong>
+    <%= @reservation.columns %>
+  </p>
+</div>
+
+
+<button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Edit', edit_reservation_path(@reservation) %></button>
+<button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Back', reservations_path %></button>

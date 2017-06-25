@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Your Guest Profile</h1>
+  <div class="collection">
+    <p class="collection-item">
+      <strong>First name:</strong>
+      <%= @user.first_name %>
+    </p>
+
+    <p class="collection-item">
+      <strong>Last name:</strong>
+      <%= @user.last_name %>
+    </p>
+
+    <p class="collection-item">
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+
+  </div>
+
+  <button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Edit', edit_user_path(@user) %></button>
+  <button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Back', users_path %></button>

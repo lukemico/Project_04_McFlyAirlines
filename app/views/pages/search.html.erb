@@ -1,0 +1,37 @@
+<div id="app">
+  <h1>
+    <!-- Backbone should be displayed here -->
+  </h1>
+</div>
+
+<script type="html/template" id="AppViewTemplate">
+  <p>An instance of the reservation Input View should go here</p>
+</script>
+
+<script type="html/template" id="SearchViewTemplate">
+  <h1>Book a Flight</h1>
+  <div class="row">
+    <div class="input-field col s6">
+      <input type="text" id="origin" placeholder="From" />
+    </div>
+    <div class="input-field col s6">
+      <input type="text" id="destination" placeholder="To" />
+    </div>
+  </div>
+  <%= button_tag "Search", :class => "btn waves-effect waves-light" %>
+
+</script>
+
+<script type="html/template" id="FlightListViewTemplate">
+  <ul id="flights">
+
+  </ul>
+</script>
+
+<script type="html/template" id="FlightDetailsViewTemplate">
+  <p>This will show the information about the individual flight</p>
+</script>
+
+<script type="html/template" id="SeatingViewTemplate">
+  <p>This will show the interactive seating view table</p>
+</script>
